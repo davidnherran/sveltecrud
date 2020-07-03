@@ -1,4 +1,19 @@
 <script>
+
+  let products = [
+    {
+      id: "1",
+    name: "Macbook",
+    description: "Laptop Macbook air",
+    category: "laptops"
+    },{
+      id: "2",
+    name: "Mouse",
+    description: "mouse",
+    category: "pheriperials"
+    }
+  ]
+
   let product = {
     id: "",
     name: "",
@@ -21,7 +36,11 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-6" />
+      <div class="col-md-6">
+        {#each products as product}
+          <li>{product.name}</li>
+        {/each}
+      </div>
       <div class="col-md-6">
         <div class="card">
           <div class="card-body">
