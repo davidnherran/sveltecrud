@@ -1,10 +1,16 @@
 <script>
-  let product = { 
-	  id: "", 
-	  name: "", 
-	  description: "", 
-	  category: "", 
-	  imageURL: "" };
+  let product = {
+    id: "",
+    name: "",
+    description: "",
+    category: "",
+    imageURL: ""
+  };
+
+  const onSubmitHandler = e => {
+    e.preventDefault();
+    console.log(product);
+  };
 </script>
 
 <style>
@@ -13,8 +19,12 @@
 
 <main>
 
-  <form action="">
-    <input bind:value={product.name} type="text" placeholder="Product name" id="product-name" />
+  <form on:submit={onSubmitHandler}>
+    <input
+      bind:value={product.name}
+      type="text"
+      placeholder="Product name"
+      id="product-name" />
     <textarea
       bind:value={product.description}
       id="product-description"
