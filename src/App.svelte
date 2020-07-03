@@ -19,28 +19,57 @@
 
 <main>
 
-  <form on:submit={onSubmitHandler}>
-    <input
-      bind:value={product.name}
-      type="text"
-      placeholder="Product name"
-      id="product-name" />
-    <textarea
-      bind:value={product.description}
-      id="product-description"
-      rows="3"
-      placeholder="Product description" />
-    <input
-      bind:value={product.imageURL}
-      type="url"
-      id="product-image-url"
-      placeholder="https://github.com/davidnherran/sveltecrud" />
-    <select id="category" bind:value={product.category}>
-      <option value="laptops">Laptops</option>
-      <option value="peripherials">Peripherials</option>
-      <option value="servers">Servers</option>
-    </select>
-    <button>Save product</button>
-  </form>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" />
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <form on:submit={onSubmitHandler}>
+
+              <div class="form-group">
+
+                <input
+                  bind:value={product.name}
+                  type="text"
+                  placeholder="Product name"
+                  id="product-name"
+                  class="form-control" />
+
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  bind:value={product.description}
+                  id="product-description"
+                  rows="3"
+                  placeholder="Product description"
+                  class="form-control" />
+              </div>
+              <div class="form-group">
+                <input
+                  bind:value={product.imageURL}
+                  type="url"
+                  id="product-image-url"
+                  placeholder="https://github.com/davidnherran/sveltecrud"
+                  class="form-control" />
+              </div>
+              <div class="form-group">
+                <select
+                  id="category"
+                  bind:value={product.category}
+                  class="form-control">
+                  <option value="laptops">Laptops</option>
+                  <option value="peripherials">Peripherials</option>
+                  <option value="servers">Servers</option>
+                </select>
+              </div>
+              <button class="btn btn-secondary">Save product</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </main>
