@@ -38,7 +38,30 @@
     <div class="row">
       <div class="col-md-6">
         {#each products as product}
-          <li>{product.name}</li>
+          <div class="card mt-2">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="" alt="">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                <h5><b>{product.name}</b></h5>
+                <span>
+                  <small>
+                    {product.category}
+                  </small>
+                </span>
+                <p class="card-text">{product.description}</p>
+                <button class="btn btn-danger btn-sm">
+                  Delete
+                </button>
+                <button class="btn btn-secondary btn-sm">
+                  Edit
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
         {/each}
       </div>
       <div class="col-md-6">
